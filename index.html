@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WL Exchange Bot — whitelabel-бот для обменников</title>
-  <meta name="description" content="Whitelabel Telegram-бот для обменников: приём платежей СберПэй/СБП, авторасчёт курса, автовывод USDT, интеграция с Bitrix24." />
+  <title>grusha — whitelabel-бот для обменников</title>
+  <meta name="description" content="Whitelabel Telegram-бот для обменников: приём платежей СберПэй/СБП, авторасчёт курса, автовывод USDT." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -50,10 +50,10 @@
       WHITELABEL · TELEGRAM · USDT
     </div>
     <h1 class="text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-6">
-      WL Exchange Bot
+      grusha
     </h1>
     <p class="text-xl md:text-2xl text-muted max-w-3xl mb-10 leading-relaxed">
-      Whitelabel-бот для обменников. Приём платежей в Telegram, авторасчёт курса с маркапом, автовывод USDT и сделка в Bitrix24 — из коробки.
+      Whitelabel-бот для обменников. Приём платежей в Telegram, авторасчёт курса с маркапом и автовывод USDT — из коробки.
     </p>
     <div class="flex flex-wrap gap-4">
       <a href="#flow" class="bg-accent text-bg font-semibold px-6 py-3 rounded-lg hover:bg-accent-dark transition glow">
@@ -71,7 +71,7 @@
     <h2 class="text-4xl md:text-5xl font-bold mb-12">Как работает бот</h2>
 
     <div class="bg-surface border border-border rounded-2xl p-6 md:p-10 mb-10 overflow-x-auto">
-      <svg viewBox="0 0 900 320" class="w-full h-auto min-w-[700px]" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 900 240" class="w-full h-auto min-w-[700px]" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
             <path d="M 0 0 L 10 5 L 0 10 z" fill="#4ade80"/>
@@ -82,47 +82,39 @@
           </linearGradient>
         </defs>
 
-        <!-- 4 nodes: Owner, Bot, Client, Bitrix -->
+        <!-- 3 nodes: Owner, Bot, Client -->
         <g font-family="system-ui" font-size="14" fill="#e5f2eb">
           <!-- Owner -->
-          <rect x="30" y="30" width="180" height="80" rx="12" fill="url(#grad)" stroke="#1f2a24" stroke-width="2"/>
-          <text x="120" y="58" text-anchor="middle" font-weight="600" fill="#4ade80">OWNER</text>
-          <text x="120" y="80" text-anchor="middle" fill="#7a8a82" font-size="12">владелец обменника</text>
-          <text x="120" y="98" text-anchor="middle" font-size="11" fill="#7a8a82">в Telegram</text>
+          <rect x="30" y="80" width="180" height="80" rx="12" fill="url(#grad)" stroke="#1f2a24" stroke-width="2"/>
+          <text x="120" y="108" text-anchor="middle" font-weight="600" fill="#4ade80">OWNER</text>
+          <text x="120" y="130" text-anchor="middle" fill="#7a8a82" font-size="12">владелец обменника</text>
+          <text x="120" y="148" text-anchor="middle" font-size="11" fill="#7a8a82">в Telegram</text>
 
           <!-- Bot -->
-          <rect x="360" y="120" width="180" height="80" rx="12" fill="url(#grad)" stroke="#4ade80" stroke-width="2"/>
-          <text x="450" y="148" text-anchor="middle" font-weight="600" fill="#4ade80">WL BOT</text>
-          <text x="450" y="170" text-anchor="middle" fill="#7a8a82" font-size="12">платёжный шлюз +</text>
-          <text x="450" y="186" text-anchor="middle" fill="#7a8a82" font-size="12">расчёт курса</text>
+          <rect x="360" y="80" width="180" height="80" rx="12" fill="url(#grad)" stroke="#4ade80" stroke-width="2"/>
+          <text x="450" y="108" text-anchor="middle" font-weight="600" fill="#4ade80">grusha</text>
+          <text x="450" y="130" text-anchor="middle" fill="#7a8a82" font-size="12">платёжный шлюз +</text>
+          <text x="450" y="146" text-anchor="middle" fill="#7a8a82" font-size="12">расчёт курса + USDT</text>
 
           <!-- Client -->
-          <rect x="690" y="30" width="180" height="80" rx="12" fill="url(#grad)" stroke="#1f2a24" stroke-width="2"/>
-          <text x="780" y="58" text-anchor="middle" font-weight="600" fill="#e5f2eb">КЛИЕНТ</text>
-          <text x="780" y="80" text-anchor="middle" fill="#7a8a82" font-size="12">платит по ссылке</text>
-          <text x="780" y="98" text-anchor="middle" font-size="11" fill="#7a8a82">СберПэй / СБП</text>
+          <rect x="690" y="80" width="180" height="80" rx="12" fill="url(#grad)" stroke="#1f2a24" stroke-width="2"/>
+          <text x="780" y="108" text-anchor="middle" font-weight="600" fill="#e5f2eb">КЛИЕНТ</text>
+          <text x="780" y="130" text-anchor="middle" fill="#7a8a82" font-size="12">платит по ссылке</text>
+          <text x="780" y="148" text-anchor="middle" font-size="11" fill="#7a8a82">СберПэй / СБП</text>
 
-          <!-- Bitrix -->
-          <rect x="690" y="220" width="180" height="80" rx="12" fill="url(#grad)" stroke="#1f2a24" stroke-width="2"/>
-          <text x="780" y="248" text-anchor="middle" font-weight="600" fill="#e5f2eb">BITRIX24</text>
-          <text x="780" y="270" text-anchor="middle" fill="#7a8a82" font-size="12">сделка на вывод</text>
-          <text x="780" y="288" text-anchor="middle" font-size="11" fill="#7a8a82">USDT</text>
+          <!-- arrows owner → bot → client -->
+          <path d="M 210 110 L 358 110" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="284" y="100" text-anchor="middle" font-size="11" fill="#4ade80">1. /create</text>
 
-          <!-- arrows -->
-          <path d="M 210 90 Q 280 90 360 140" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="265" y="100" font-size="11" fill="#4ade80">1. /create</text>
+          <path d="M 540 110 L 688 110" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
+          <text x="614" y="100" text-anchor="middle" font-size="11" fill="#4ade80">2. ссылка</text>
 
-          <path d="M 540 140 Q 610 90 690 70" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="600" y="100" font-size="11" fill="#4ade80">2. ссылка</text>
+          <!-- back arrows client → bot → owner (PAID + USDT) -->
+          <path d="M 688 135 L 540 135" fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+          <text x="614" y="155" text-anchor="middle" font-size="11" fill="#4ade80">3. PAID</text>
 
-          <path d="M 690 100 Q 620 130 540 170" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="600" y="160" font-size="11" fill="#4ade80">3. PAID</text>
-
-          <path d="M 360 170 Q 280 200 210 110" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="240" y="180" font-size="11" fill="#4ade80">4. notify</text>
-
-          <path d="M 540 180 Q 610 220 690 250" fill="none" stroke="#4ade80" stroke-width="2" marker-end="url(#arrow)"/>
-          <text x="600" y="230" font-size="11" fill="#4ade80">5. /withdraw → Bitrix</text>
+          <path d="M 358 135 L 210 135" fill="none" stroke="#4ade80" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+          <text x="284" y="155" text-anchor="middle" font-size="11" fill="#4ade80">4. notify + USDT</text>
         </g>
       </svg>
     </div>
@@ -153,14 +145,14 @@
         <span class="text-accent font-mono text-2xl font-bold leading-none w-10 shrink-0">04</span>
         <div>
           <h3 class="font-semibold text-lg mb-1">Owner запрашивает вывод USDT</h3>
-          <p class="text-muted">Когда накоплен баланс — команда <code class="bg-surface px-2 py-0.5 rounded text-accent">/withdraw</code>, бот создаёт сделку на вывод в Bitrix24.</p>
+          <p class="text-muted">Когда накоплен баланс — команда <code class="bg-surface px-2 py-0.5 rounded text-accent">/withdraw</code>, бот фиксирует заявку и передаёт её в обработку.</p>
         </div>
       </li>
       <li class="flex gap-4">
         <span class="text-accent font-mono text-2xl font-bold leading-none w-10 shrink-0">05</span>
         <div>
           <h3 class="font-semibold text-lg mb-1">USDT приходит на кошелёк</h3>
-          <p class="text-muted">Менеджер Grusha обрабатывает сделку в Bitrix и отправляет USDT на указанный TRC-20 адрес.</p>
+          <p class="text-muted">Команда Grusha обрабатывает заявку и отправляет USDT на указанный TRC-20 адрес. Owner получает уведомление в Telegram.</p>
         </div>
       </li>
     </ol>
@@ -179,7 +171,7 @@
 
       <details class="bg-surface border border-border rounded-xl p-5">
         <summary class="font-semibold text-lg cursor-pointer">Какие платёжные методы поддерживаются?</summary>
-        <p class="text-muted mt-3">СберПэй (payecom.ru) и СБП через Доверка (qr.nspk.ru). Под конкретный обменник доступные методы настраиваются индивидуально.</p>
+        <p class="text-muted mt-3">СберПэй и СБП. Под конкретный обменник доступные методы настраиваются индивидуально.</p>
       </details>
 
       <details class="bg-surface border border-border rounded-xl p-5">
@@ -204,12 +196,12 @@
 
       <details class="bg-surface border border-border rounded-xl p-5">
         <summary class="font-semibold text-lg cursor-pointer">Что с безопасностью платежей?</summary>
-        <p class="text-muted mt-3">Деньги идут напрямую от клиента в платёжный шлюз (Сбер/СБП), а не через бота. Бот только создаёт ссылку и принимает уведомление о статусе. USDT отправляется на ваш кошелёк отдельной операцией через Bitrix.</p>
+        <p class="text-muted mt-3">Деньги идут напрямую от клиента в платёжный шлюз (Сбер/СБП), а не через бота. Бот только создаёт ссылку и принимает уведомление о статусе. USDT отправляется на ваш кошелёк отдельной операцией.</p>
       </details>
 
       <details class="bg-surface border border-border rounded-xl p-5">
-        <summary class="font-semibold text-lg cursor-pointer">Что если платёжный коннектор временно недоступен?</summary>
-        <p class="text-muted mt-3">Бот сообщит, что ссылка не создана, транзакция помечается как ошибочная. Уже оплаченные ссылки обрабатываются как обычно — webhook доходит, даже если ссылка успела истечь по таймауту.</p>
+        <summary class="font-semibold text-lg cursor-pointer">Что если платёжный шлюз временно недоступен?</summary>
+        <p class="text-muted mt-3">Бот сообщит, что ссылка не создана, транзакция помечается как ошибочная. Уже оплаченные ссылки обрабатываются как обычно — уведомление доходит, даже если ссылка успела истечь по таймауту.</p>
       </details>
     </div>
   </section>
@@ -225,7 +217,7 @@
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.464.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
       @kareemnba
     </a>
-    <p class="text-muted mt-12 text-sm">© 2026 Grusha · WL Exchange Bot</p>
+    <p class="text-muted mt-12 text-sm">© 2026 grusha</p>
   </section>
 
 </body>
